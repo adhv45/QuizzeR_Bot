@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="#" />
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script>
+		function check_correct(answer)
+		{
+			var flag = true;
+			var ans=answer;
+			if (document.getElementById('A').checked) {
+ 					rate_value = document.getElementById('A').value;
+ 			}
+ 			else if (document.getElementById('B').checked) {
+  					rate_value = document.getElementById('B').value;
+  			}
+  			else if (document.getElementById('C').checked) {
+  					rate_value = document.getElementById('C').value;
+			}
+			else if (document.getElementById('D').checked) {
+  					rate_value = document.getElementById('D').value;
+			}
+			if(ans==rate_value && flag)
+			{
+				text.style.display = "block";
+				flag = false;
+			}
+			else if(flag){	
+				text1.style.display = "block";
+				flag=false;	
+			}
+		}
+		</script>
+  		<style>
+  			.akash{
+				font-size: 35px;
+				margin-left: 8px;
+				font-family: serif;
+			}
+  			.bar{
+  				position:relative;
+  				height:100%;
+  				width:120%;
+  				top:120px;
+  				left:280px;
+  			}
+  			body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+			body, html {
+    			height: 100%;
+    			line-height: 1.8;
+			}
+			/* Full height image header */
+			.bgimg-1 {
+   				 background-position: center;
+    			background-size: cover;
+    			/*background-image: url("/w3images/mac.jpg");*/
+    			min-height: 100%;
+			}
+			.w3-bar .w3-button {
+    			padding: 16px;
+			}
+			.option{
+				position: relative;
+				margin-left: 150px;
+				top:170px;
+				margin-left: 80px;
+			}
+			.list_option{
+				margin-left: 70px;
+				font-size: 20px;
+			}
+  		</style>
+	</head>
+	<body>
+		<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <span class="akash"><strong>QuizzeR</strong></span>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:5000/" class="w3-bar-item w3-button"><span style="font-size: 20px;"><i class="fa fa-home"></i> <span style="font-size: 20px;">HOME<span></a>
+      <a href="http://localhost:5000/about" class="w3-bar-item w3-button"><span style="font-size: 20px;"> ABOUT</span></a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+</nav>
+		<form action="http://localhost:5000/search" method="post">
+			<div class ="form-group">
+				<div class="bar">
+				<div class="col-xs-5">
+				<input class="form-control input-lg" id="inputlg" type="text" value="{{keyword}}" autofocus Name="Name">
+				</div>
+				<span class="make">
+				<button type="submit" class="btn btn-default" value="Submit" style="padding: 10px 10px 10px 10px; font-size: 20px;">Generate Quiz</button>
+				</span>
+			</div>
+    </div>
+			</div>
+		</form>
+		<div style="margin-top: 180px;margin-left: 80px;">
+		<h1>Question Page on {{keyword}}</h1>
+		
+		{% for i in range(length) %}
+		<div style="margin-top: 20px;font-size: 20px;">
+		<h3>Question {{i+1}}. {{questions[i]}}</h3>
+
+		<div style="margin-left: 15px;">
+			<div class="container">
+			<form>
+				<div class="radio">
+			      <label><input type="radio" name="optradio" id="A" value={{answers[i]}} onclick="check_correct(answers[i])">{{answers[i]}}</label>
+			    </div>
+			    <div class="radio">
+			      <label><input type="radio" name="optradio" id="B" value={{options[i]}} onclick="check_correct(answers[i])">{{options[i]}}</label>
+			    </div>
+			    <div class="radio">
+			      <label><input type="radio" name="optradio" id="C" value={{options[i+1]}} onclick="check_correct(answers[i])">{{options[i+1]}}</label>
+			    </div>
+			    <div class="radio">
+			      <label><input type="radio" name="optradio" id="D" value={{options[i+2]}} onclick="check_correct(answers[i])">{{options[i+2]}}</label>
+			    </div>
+		    </form>
+		    </div>
+		</div>
+	</div>	  
+	<button type="button"
+	onclick="document.getElementById('demo{{i}}').innerHTML = '{{answers[i]}}'">
+	Click Here to Check the Answer.</button>
+
+	<p id="demo{{i}}" style="font-size: 30px;"></p>
+
+	{% endfor %}
+	</div>
+	</div>
+	</body>
+</html>
+	
+

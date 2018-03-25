@@ -1,0 +1,5 @@
+spacy 
+nltk 
+beautifulsoup 
+wikipedia 
+flask 

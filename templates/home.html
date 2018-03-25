@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+/*this is background image*/
+body{
+	background-image: url("static/images/welcome2.jpg");
+	height: 100%;
+	width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    /*background-image: url("/w3images/mac.jpg");*/
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+/*for make the quiz tab*/
+/*for Quizzer on the top*/
+.akash{
+	font-size: 35px;
+	margin-left: 8px;
+	font-family: serif;
+}
+.bar{
+    text-align: center;
+  	position:relative;
+  	top:320px;
+  	left:450px;
+    height: 100%;
+    width: 120%;
+  	cursor: pointer;
+  }
+.make{
+    text-align: center;
+  	position: relative;
+    right:650px;
+  	top:40px;
+    font-size: 20px;
+}
+.Quizzer{
+	color: white;
+  text-align: center;
+	position: relative;
+  right:10px;
+	bottom:40px;
+	font-family: sans-serif;
+	font-size: 150px;
+}
+</style>
+</head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <span class="akash"><strong>QuizzeR</strong></span>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:5000/" class="w3-bar-item w3-button"><span style="font-size: 20px;"><i class="fa fa-home"></i> <span style="font-size: 20px;">HOME<span></a>
+      <a href="http://localhost:5000/about" class="w3-bar-item w3-button"><i class="fa fa-bars"></i><span style="font-size: 20px;"> ABOUT</span></a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+</nav>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div >
+    <p align = "center" style="font-family: serif;font-size: 60px; color:white; margin-top: 60px;">Welcome. Your search to make Quiz ends here!</p>
+  </div>
+<!--<p align ="center" class="make_the_quiz" ><a href="file:///home/akash/make_the_quiz1.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"><strong>Make the Quiz</strong></a></p>-->
+<form action="http://localhost:5000/search" method="post">
+			<div class ="form-group">
+				<div class="bar">
+				<div class="col-xs-5">
+				<input type="text" class="form-control input-lg" id="inputlg" placeholder="Enter the Keyword" Name="Name">
+				</div>
+				<br><br>
+				<span class="make">
+				<button type="submit" class="btn btn-default" style="padding: 10px 10px 10px 10px; font-size: 20px; value="Submit">Generate Quiz</button>
+				</span>
+				</div>
+    		</div>
+			</div>
+</form>
+<div class="Quizzer">
+	QuizzeR
+</div>
+</body>
+</html>
+

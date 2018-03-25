@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+		body, html {
+		    height: 100%;
+		    line-height: 1.8;
+		}
+		/* Full height image header */
+		.bgimg-1 {
+		    background-position: center;
+		    background-size: cover;
+		    /*background-image: url("/w3images/mac.jpg");*/
+		    min-height: 100%;
+		}
+		.w3-bar .w3-button {
+		    padding: 16px;
+		}
+		/*for make the quiz tab*/
+		/*for Quizzer on the top*/
+		.akash{
+			font-size: 35px;
+			margin-left: 8px;
+			font-family: serif;
+		}
+		html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body><div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <span class="akash"><strong>QuizzeR</strong></span>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:5000/" class="w3-bar-item w3-button"><span style="font-size: 20px;"><i class="fa fa-home"></i> <span style="font-size: 20px;">HOME<span></a>
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-bars"></i><span style="font-size: 20px;"> ABOUT</span></a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+</nav>
+<h1 style="text-align: center; margin-top:100px;">ABOUT THE TEAM</h1>
+<br><br><br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fslv1-1.fna.fbcdn.net/v/t1.0-9/28684973_348190275688339_8486996988103685781_n.jpg?_nc_cat=0&oh=b0b0a9a21ebb66bbcbbb6850a81a450a&oe=5B72D00C" alt="Aayush" style="width:100%">
+      <div class="container">
+        <h2>Aayush Sharma</h2>
+        <p class="title">CSE DD @ NIT Hamirpur</p>
+        <p>aayush1771@gmail.com</p>
+       <a href="https://github.com/aayush1771"><i class="fa fa-github" style="font-size:36px;margin-left:140px;"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fslv1-1.fna.fbcdn.net/v/t1.0-9/28684973_348190275688339_8486996988103685781_n.jpg?_nc_cat=0&oh=b0b0a9a21ebb66bbcbbb6850a81a450a&oe=5B72D00C" alt="Anil" style="width:100%">
+      <div class="container">
+        <h2>Anil Chhipa</h2>
+        <p class="title">CSE DD @ NIT Hamirpur</p>
+        <p>chhipaanil98@gmail.com</p>
+        <a href="https://github.com/adhv45"><i class="fa fa-github" style="font-size:36px;margin-left:140px;"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fslv1-1.fna.fbcdn.net/v/t1.0-9/28684973_348190275688339_8486996988103685781_n.jpg?_nc_cat=0&oh=b0b0a9a21ebb66bbcbbb6850a81a450a&oe=5B72D00C" alt="Sameer" style="width:100%">
+      <div class="container">
+        <h2>Sameer Mansuri</h2>
+        <p class="title">CSE DD @ NIT Hamirpur</p>
+        <p>samir.mansuri98@gmail.com</p>
+        <a href="https://github.com/sameer91"><i class="fa fa-github" style="font-size:36px;margin-left:140px;"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fslv1-1.fna.fbcdn.net/v/t1.0-9/28684973_348190275688339_8486996988103685781_n.jpg?_nc_cat=0&oh=b0b0a9a21ebb66bbcbbb6850a81a450a&oe=5B72D00C" alt="Akash" style="width:100%">
+      <div class="container">
+        <h2>Akash Soni</h2>
+        <p class="title">CSE DD @ NIT Hamirpur</p>
+        <p>akashsoninit16@gmail.com</p>
+        <a href="https://github.com/soniakash1998"><i class="fa fa-github" style="font-size:36px;margin-left:140px;"></i></a>
+      </div>
+    </div>
+  </div>
+	<div class="column">
+    <div class="card">
+      <img src="https://scontent.fslv1-1.fna.fbcdn.net/v/t1.0-9/28684973_348190275688339_8486996988103685781_n.jpg?_nc_cat=0&oh=b0b0a9a21ebb66bbcbbb6850a81a450a&oe=5B72D00C" alt="Divyanshu" style="width:100%">
+      <div class="container">
+        <h2>Divyanshu Dhawan</h2>
+        <p class="title">CSE DD @ NIT Hamirpur</p>
+        <p>divyanshu1171299@gmail.com</p>
+		<a href="https://github.com/dextroxd"><i class="fa fa-github" style="font-size:36px;margin-left:140px;"></i></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
