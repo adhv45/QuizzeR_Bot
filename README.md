@@ -7,18 +7,26 @@ and analyses the received information using spaCy and nltk. The accuracy is 70-8
 ### Prerequisites
 
 Things you need to install:
- 
+first get pip for python3
+	Debian/Ubuntu : sudo apt-get install python3-pip
+	arch : sudo pacman -S python-pip
+	
  python3 
 		libraries required: spacy, flask, Wikipedia, hunspell.
 	already included wikipedia as there were issues with originel api.
 	And already included nltk with tokeniser data.
-
+	
+	first enter virtual env 
+		source QUIZZER_DIR/.env/bin/activate
+		
 	install these packages using pip (pip3 for python3):
 
 	i.e.
 	```
- 		pip3 install spacy
-		python3 -m spacy download en
+ 		pip3 install -v spacy (do the same for flask, hunspell)
+		
+		download spacy database for english
+			python3 -m spacy download en
 	```
 
 ## Running the tests
