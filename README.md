@@ -9,13 +9,16 @@ and analyses the received information using spaCy and nltk. The accuracy is 70-8
 Things you need to install:
  
  python3 
-		libraries required: spacy, nltk, beautifulsoup, flask, Wikipedia, hunspell.
+		libraries required: spacy, flask, Wikipedia, hunspell.
+	already included wikipedia as there were issues with originel api.
+	And already included nltk with tokeniser data.
 
 	install these packages using pip (pip3 for python3):
 
 	i.e.
 	```
  		pip3 install spacy
+		python3 -m spacy download en
 	```
 
 ## Running the tests
