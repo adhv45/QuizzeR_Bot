@@ -7,7 +7,8 @@ and analyses the received information using spaCy and nltk. The accuracy is 70-8
 ### Prerequisites
 
 Things you need to install:
-first get pip for python3
+first get pip for python3 (included env is based on python3.7 so use new env if needed)
+
 	Debian/Ubuntu : sudo apt-get install python3-pip
 	arch : sudo pacman -S python-pip
 	
@@ -24,10 +25,32 @@ first get pip for python3
 	i.e.
 	```
  		pip3 install -v spacy (do the same for flask, hunspell)
-		
+			google if u face some error installing hunspell
+			
 		download spacy database for english
 			python3 -m spacy download en
 	```
+using new environment 
+	
+	rm -rf QUIZZER_DIR/.env
+	virtualenv .env
+	source .env/bin/activate
+	install wikipedia using pip
+		edit .env/lib/pythonX.X/site-packages/wikipedia/wikipedia.py
+			aroung line no. 646
+			     - query_params.update(self.__title_query_param)
+			     + if not getattr(self, 'title', None):
+			     + query_params['pageid'] = self.pageid
+			     + else:
+			     + query_params['page'] = self.title
+	install nltk using pip
+		got to python cli
+			import nltk
+			nltk.download('punkt')
+	install spacy (refer to above para)
+	
+	install hunspell(refer to google for any error)
+	install flask
 
 ## Running the tests
 	
