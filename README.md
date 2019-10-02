@@ -87,4 +87,6 @@ using new environment
 	* Anil Chhipa	- adhv45
 	* Sameer Mansuri- sameer91
 	* Akash Soni	- soniakash1998
-	* Divyanshu Dhawan - dextroxd
+	* Divyanshu Dhawan - dextroxdt
+	
+Contribution to project is 
