@@ -96,7 +96,9 @@ def make_questions(keyword):
 			option3 = []
 			for x in option:
 				x = nlp(x)
-				if x.similarity(answer) > 0.5 and x.similarity(answer) != 1:
+				if x.similarity(answer) > 0.5 and \
+				   x.similarity(answer) != 1 and \
+				   x not in option3:
 					option3.append(x.text)
 
 			if len(option3)<3:
